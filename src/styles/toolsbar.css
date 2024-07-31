@@ -1,0 +1,77 @@
+.toolsbar {
+    position: absolute;
+    cursor: pointer;
+    width: auto;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: .5rem;
+    border-radius: 1rem;
+    background-color: var(--gray_color);
+    color: var(--white_color);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: .5rem;
+    & i {
+        cursor: pointer;
+        padding: .5rem;
+        border-radius: .5rem;
+        transition: all .3s ease-in-out;
+    }
+    & i:hover {
+        background-color: var(--gray_hover_color);
+    }
+    & .indication {
+        position: absolute;
+        font-size: .8rem;
+        text-align: center;
+        width: 100%;
+        top: 120%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: var(--color_text_indication);
+        font-family: "PT Sans Narrow", sans-serif;
+        user-select: none;
+    }
+
+    .selected-toolbar-button {
+        background-color: var(--red_color);
+    }
+
+    .selected-toolbar-button:hover {
+        background-color: var(--red_light_color);
+    }
+    .active_lock {
+        background-color: var(--green_color);
+    }
+    .active_lock:hover {
+        background-color: var(--green_light_color);
+    }
+}
+
+.vertical-separator {
+    width: 1px;
+    height: 20px;
+    background-color: var(--gray_light_color);
+    border: none;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+
+
+@media screen and (width <= 980px) {
+    .toolsbar {
+        flex-direction: column;
+        top: 8%;
+        left: 10%;
+    }
+    .toolsbar .indication {
+        display: none;
+    }
+    .vertical-separator {
+        width: 20px;
+        height: 1px;
+    }
+}

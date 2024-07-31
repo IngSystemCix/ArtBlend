@@ -1,0 +1,49 @@
+.container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    top: 2.5rem;
+    right: 1%;
+    & input[type="text"] {
+        width: 15rem;
+        background-color: var(--gray_color);
+        color: var(--white_color);
+        border: solid .3px var(--gray_light_color);
+        outline: none;
+        padding: .5rem;
+        border-radius: .5rem;
+        font-family: "PT Sans Narrow", sans-serif;
+    }
+    & button[type="button"] {
+        background-color: var(--red_color);
+        color: var(--white_color);
+        border: 0;
+        padding: .5rem;
+        border-radius: .5rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+        transition: all .3s ease-in-out;
+        font-family: "PT Sans Narrow", sans-serif;
+        letter-spacing: .1rem;
+    }
+    & button[type="button"]:hover {
+        background-color: var(--red_light_color);
+    }
+}
+
+@media screen and (width <= 980px) {
+    .container {
+        width: 100%;
+        top: 1rem;
+        right: 8%;
+        justify-content: end;
+    }
+    .container button[type="button"] {
+        display: none;
+    }
+}

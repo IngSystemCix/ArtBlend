@@ -1,0 +1,165 @@
+.hamburgerMenu {
+    background-color: var(--gray_color);
+    position: absolute;
+    top: 2.5rem;
+    left: 1%;
+    padding: .6rem;
+    border-radius: .5rem;
+    color: var(--white_color);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.hamburgerMenu:hover {
+    background-color: var(--gray_hover_color);
+}
+
+.menu {
+    position: absolute;
+    top: 120%;
+    width: 18rem;
+    border-radius: 1rem;
+    background-color: var(--gray_color);
+    overflow: hidden;
+}
+
+.buttonMenu {
+    width: 100%;
+    background-color: var(--gray_color);
+    border: 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    color: var(--white_color);
+    padding: 1rem;
+    cursor: pointer;
+    font-family: "PT Sans Narrow", sans-serif;
+    letter-spacing: .1rem;
+    transition: all .3s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+.buttonMenu:hover {
+    background-color: var(--gray_hover_color);
+}
+
+.section_type_grid {
+    width: 100%;
+    padding: .5rem 1rem;
+    display : flex;
+    flex-direction : column;
+    justify-content : end;
+    align-items : center;
+    cursor: initial;
+    gap : .5rem;
+
+    & span {
+        color : var(--white_blur);
+        width : 100%;
+        display : flex;
+        justify-content : start;
+        align-items : center;
+        font-family : "PT Sans Narrow", sans-serif;
+        user-select: none;
+    }
+
+    & .list_type_grid {
+        width: 100%;
+        padding: .5rem 1rem;
+        display : flex;
+        justify-content : end;
+        align-items : center;
+        cursor: initial;
+        gap : 1rem;
+    }
+
+    .grid {
+        width: 32px;
+        height: 32px;
+        background-image: linear-gradient(var(--white_color) 1px, transparent 1px), linear-gradient(to right, var(--white_color) 1px, transparent 1px);
+        background-size: 12px 12px;
+        background-color: #13171b;
+        cursor: pointer;
+        border-radius: .5rem;
+        border: 0;
+    }
+    
+    .dot {
+        width: 32px;
+        height: 32px;
+        background-image: radial-gradient(var(--white_color) 1px, transparent 1px);
+        background-size: 12px 12px;
+        background-color: #13171b;
+        cursor: pointer;
+        border-radius: .5rem;
+        border: 0;
+    }
+    
+    .horizontalLine {
+        width: 32px;
+        height: 32px;
+        background-image: repeating-linear-gradient(0deg, var(--white_color), var(--white_color) 1px, transparent 1px, transparent);
+        background-size: 12px 12px;
+        background-color: #13171b;
+        cursor: pointer;
+        border-radius: .5rem;
+        border: 0;
+    }
+    
+    .noneGrid {
+        width: 32px;
+        height: 32px;
+        background-size: 12px 12px;
+        background-color: #13171b;
+        cursor: pointer;
+        border-radius: .5rem;
+        border: 0;
+    }
+}
+
+.section_colors_background {
+    width: 100%;
+    padding: .5rem 1rem;
+    display : flex;
+    flex-direction : column;
+    justify-content : end;
+    align-items : center;
+    cursor: initial;
+    gap : .5rem;
+
+    & span {
+        color : var(--white_blur);
+        width : 100%;
+        display : flex;
+        justify-content : start;
+        align-items : center;
+        font-family : "PT Sans Narrow", sans-serif;
+        user-select: none;
+    }
+
+    & .list_colors_background {
+        width: 100%;
+        padding: .5rem 1rem;
+        display : flex;
+        justify-content : end;
+        align-items : center;
+        cursor: initial;
+        gap : 1rem;
+    }
+    .defaultButton {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        border-radius: .5rem;
+        border: 0;
+    }
+}
+@media screen and (width <= 980px) {
+    .hamburgerMenu {
+        display: none;
+    }
+}
